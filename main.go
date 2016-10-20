@@ -88,6 +88,6 @@ func SaveFile(destDir string, title string, imageURL string) {
 func Usage() {
 	fmt.Println("Please pass a url to check")
 	fmt.Println("")
-	fmt.Println("usage: scov https://soundcloud.com/artist/track")
+	fmt.Println("usage: scar https://soundcloud.com/artist/track")
 	return
 }
