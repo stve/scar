@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"path"
+	"strings"
 
 	"github.com/mitchellh/go-homedir"
 	"github.com/rojters/opengraph"
@@ -54,6 +55,10 @@ func main() {
 
 	if len(title) > 0 && len(imageURL) > 0 {
 		title = title + ".jpg"
+
+		if strings.Contains(title, "//") {
+			title = strings.Replace(title, "//", "-", -1)
+		}
 
 		SaveFile(destinationDir, title, imageURL)
 
