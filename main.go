@@ -13,10 +13,12 @@ import (
 	"github.com/rojters/opengraph"
 )
 
+const defaultDir string = "~/Downloads"
+
 func main() {
 	args := os.Args[1:]
 
-	destinationDir, err := homedir.Expand("~/Downloads")
+	destinationDir, err := homedir.Expand(defaultDir)
 	if err != nil {
 		log.Fatal(err)
 	}
