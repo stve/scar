@@ -1,0 +1,11 @@
+build:
+  main: main.go
+  binary_name: scar
+  goos:
+    - windows
+    - darwin
+    - linux
+
+brew:
+  repo: stve/homebrew-formulae
+  folder: Formula
