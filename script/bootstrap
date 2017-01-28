@@ -10,6 +10,7 @@ fi
 
 go get github.com/mitchellh/go-homedir
 go get github.com/rojters/opengraph
+go get gopkg.in/urfave/cli.v1
 
 if [ $STATUS -eq 0 ]; then
   echo "Everything OK."
