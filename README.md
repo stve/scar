@@ -10,6 +10,18 @@ Pass the URL of the track you'd like to download the artwork for. Files will be 
 scar https://soundcloud.com/artist/track
 ```
 
+### Saving to a different directory
+
+```
+scar --directory ~/Desktop https://soundcloud.com/artist/track
+```
+
+### Saving with a different filename
+
+```
+scar --file cover.jpg https://soundcloud.com/artist/track
+```
+
 ## Note
 
 It's possible this violates Soundcloud's terms of service. I have read through the TOS and while they have restrictions on downloading streams, there is no obvious provision in place for artwork.
