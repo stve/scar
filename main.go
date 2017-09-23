@@ -78,8 +78,8 @@ func main() {
 				filename = artwork.Title + ".jpg"
 			}
 
-			if strings.Contains(filename, "//") {
-				filename = strings.Replace(filename, "//", "-", -1)
+			if strings.Contains(filename, "/") {
+				filename = strings.Replace(filename, "/", "-", -1)
 			}
 
 			SaveFile(destinationDir, filename, artwork.ImageURL)
