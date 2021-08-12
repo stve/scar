@@ -6,8 +6,14 @@ build:
     - darwin
     - linux
 
-brew:
-  github: 
-    owner: stve
-    name: homebrew-formulae
-  folder: Formula
+brews:
+  -
+    name: scar
+    folder: Formula
+    tap:
+      owner: stve
+      name: homebrew-formulae
+      # Optionally a token can be provided, if it differs from the token provided to GoReleaser
+      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+
+    
