@@ -10,10 +10,9 @@ brews:
   -
     name: scar
     folder: Formula
+    commit_author:
+      name: stve
+      email: steve.agalloco@gmail.com
     tap:
       owner: stve
       name: homebrew-formulae
-      # Optionally a token can be provided, if it differs from the token provided to GoReleaser
-      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
-
-    
