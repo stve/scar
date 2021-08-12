@@ -10,16 +10,16 @@ Pass the URL of the track you'd like to download the artwork for. Files will be 
 scar https://soundcloud.com/artist/track
 ```
 
-### Saving to a different directory
+### Saving to a specific directory
 
 ```
 scar --directory ~/Desktop https://soundcloud.com/artist/track
 ```
 
-### Saving with a different filename
+### Saving with a specific filename
 
 ```
-scar --file cover.jpg https://soundcloud.com/artist/track
+scar --filename cover.jpg https://soundcloud.com/artist/track
 ```
 
 ## Note
