@@ -16,3 +16,4 @@ brews:
     tap:
       owner: stve
       name: homebrew-formulae
+      token: ${{ secrets.GITHUB_TOKEN }}
