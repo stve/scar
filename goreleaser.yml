@@ -1,19 +1,45 @@
-build:
-  main: main.go
-  binary: scar
-  goos:
-    - windows
-    - darwin
-    - linux
+project_name: scar
+
+env:
+  - GO111MODULE=on
+  - CGO_ENABLED=0
+
+before:
+  hooks:
+    - go mod download
+
+builds:
+  - id: "scar"
+    binary: "scar"
+    main: main.go
+    goos:
+      - windows
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm64
+      - "386"
+      - arm
+    goarm:
+      - "6"
+      - "7"
+    ignore:
+      - goos: windows
+        goarch: arm64
+      - goos: windows
+        goarm: "6"
+      - goos: windows
+        goarm: "7"
 
 brews:
-  -
-    name: scar
-    folder: Formula
+  - goarm: "6"
     commit_author:
       name: stve
       email: steve.agalloco@gmail.com
     tap:
       owner: stve
-      name: homebrew-formulae
-      token: ${{ secrets.GORELEASER_GITHUB_TOKEN }}
+      name: homebrew-tap
+      token: ${{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}
+    description: "Soundcloud artwork downloader"
+    homepage: "https://github.com/stve/scar"
