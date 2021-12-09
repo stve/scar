@@ -40,6 +40,6 @@ brews:
     tap:
       owner: stve
       name: homebrew-tap
-      token: ${{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}
+      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
     description: "Soundcloud artwork downloader"
     homepage: "https://github.com/stve/scar"
