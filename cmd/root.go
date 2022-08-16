@@ -19,8 +19,9 @@ var filename string
 var directory string
 
 var rootCmd = &cobra.Command{
-	Use:   "scar",
+	Use:   "scar https://soundcloud.com/artist/track [flags]",
 	Short: "scar is a simple cli for downloading soundcloud artwork",
+	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		download(args[0], filename, directory)
 	},
